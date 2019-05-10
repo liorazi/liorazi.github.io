@@ -1,9 +1,9 @@
 ---
-title: Effective upselling techniques
+title: Hello World
 categories:
   - sales
   - tips
-author_staff_member: james
+author_staff_member:
 show_comments: true
 ---
 

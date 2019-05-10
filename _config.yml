@@ -1,24 +1,24 @@
-title: Urban Template
-url: "https://teal-worm.cloudvent.net"
+title: Azi Apps
+url: "https://azi.app"
 baseurl:
 google_analytics_key:
 google_maps_javascript_api_key:
 disqus_shortname:
 
 # Default description in social shares for the jekyll-seo-tag gem
-description: Jekyll template with example content for a web agency.
+description:
 
 # Author details for the jekyll-seo-tag gem
 author:
-  name:
-  email:
-  twitter: # twitter username without the @ symbol
+  name: Lior Azi
+  email: lior.azi@gmail.com
+  twitter: liorazi
 
 # Social details for the jekyll-seo-tag gem
 social:
-  name: Urban Template
+  name: Azi Apps
   links:
-    - https://github.com/CloudCannon/urban-jekyll-template
+    - https://azi.app
 
 timezone: Etc/UTC
 

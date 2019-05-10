@@ -12,19 +12,11 @@
       link: /contact/
 - title: Social
   links:
-    - name: Facebook
-      link:
-      social_icon: Facebook
-      new_window: true
     - name: Twitter
-      link:
+      link: https://twitter.com/liorazi
       social_icon: Twitter
       new_window: true
-    - name: Google+
-      link:
-      social_icon: Google Plus
-      new_window: true
     - name: LinkedIn
-      link:
+      link: https://www.linkedin.com/in/liorazi
       social_icon: LinkedIn
       new_window: true
