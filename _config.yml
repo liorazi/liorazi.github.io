@@ -1,4 +1,4 @@
-title: Azi Apps
+title: Lior Azi
 url: "https://azi.app"
 baseurl:
 google_analytics_key:
@@ -16,7 +16,7 @@ author:
 
 # Social details for the jekyll-seo-tag gem
 social:
-  name: Azi Apps
+  name: Lior Azi
   links:
     - https://azi.app
 
