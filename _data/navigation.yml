@@ -1,7 +1,7 @@
 links:
-- name: Portfolio
-  link: /portfolio/
+# - name: Portfolio
+#   link: /portfolio/
 - name: Blog
   link: /blog/
-- name: Contact
-  link: /contact/
+# - name: Contact
+#   link: /contact/
