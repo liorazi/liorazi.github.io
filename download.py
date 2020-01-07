@@ -36,7 +36,7 @@ def check_for_new_file():
     # url = "https://liorazi.github.io/info.html"
 
     # browser = webdriver.Firefox(firefox_binary=FirefoxBinary())
-    browser = webdriver.Chrome(execution_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
+    browser = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
     browser.get(url)
     print(browser.page_source)
     # soup = BeautifulSoup(browser.page_source, 'html.parser')
