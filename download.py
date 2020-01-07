@@ -24,21 +24,23 @@ def check_for_new_file():
     print('Testing 1...2....3...')
     # GOOGLE_CHROME_BIN = '/app/.apt/usr/bin/google_chrome'
     # CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
+    file_directory = os.path.abspath('files')
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument('--disable-gpu')
     chrome_options.add_argument('--no-sandbox')
     chrome_options.add_argument('--headless')
     chrome_options.add_argument('--disable-dev-shm-usage')
     chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
-
-    #url = 'https://data.gov.il/dataset/rechev-tag-nachim/resource/c8b9f9c8-4612-4068-934f-d4acd2e3c06e/download/'
-    url = "https://www.google.com"
+    prefs = { "download.default_directory": file_directory }
+    chrome_options.add_experimental_option('prefs', prefs)
+    url = 'https://data.gov.il/dataset/rechev-tag-nachim/resource/c8b9f9c8-4612-4068-934f-d4acd2e3c06e/download/'
+    #url = "https://www.google.com"
     # url = "https://liorazi.github.io/info.html"
 
     # browser = webdriver.Firefox(firefox_binary=FirefoxBinary())
-    browser = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
-    browser.get(url)
-    print(browser.page_source)
+    driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
+    driver.get(url)
+    # print(driver.page_source)
     # soup = BeautifulSoup(browser.page_source, 'html.parser')
     #
     # data = soup.select(".ft0 a")
