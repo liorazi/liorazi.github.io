@@ -3,7 +3,7 @@ import os
 # import urllib.request
 # import requests
 # from bs4 import BeautifulSoup
-# import pickle
+import pickle
 from selenium import webdriver
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 
@@ -40,6 +40,7 @@ def check_for_new_file():
     # browser = webdriver.Firefox(firefox_binary=FirefoxBinary())
     driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
     driver.get(url)
+    pickle.dump( driver.get_cookies() , open("cookies.pkl","wb"))
     # print(driver.page_source)
     # soup = BeautifulSoup(browser.page_source, 'html.parser')
     #
