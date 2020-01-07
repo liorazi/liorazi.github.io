@@ -1,3 +1,12 @@
 import time
-print('Testing 1...2....3...')
-time.sleep(5000)
+
+def main():
+    while True:
+        check_for_new_file()
+        time.sleep(5)
+
+def check_for_new_file():
+    print('Testing 1...2....3...')
+
+if __name__== "__main__":
+  main()
