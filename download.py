@@ -45,7 +45,7 @@ def check_for_new_file():
     for cookie in cookies_list:
         cookies_dict[cookie['name']] = cookie['value']
 
-    print(cookie_dict)
+    print(cookies_dict)
     # session_id1 = cookies_dict.get('rbzid')
     # print(session_id1)
     #
