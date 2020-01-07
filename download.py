@@ -1,9 +1,9 @@
 import time
 import os
-import urllib.request
-import requests
-from bs4 import BeautifulSoup
-import pickle
+# import urllib.request
+# import requests
+# from bs4 import BeautifulSoup
+# import pickle
 from selenium import webdriver
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 
