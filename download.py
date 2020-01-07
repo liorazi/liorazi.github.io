@@ -45,11 +45,12 @@ def check_for_new_file():
     for cookie in cookies_list:
         cookies_dict[cookie['name']] = cookie['value']
 
-    session_id1 = cookies_dict.get('rbzid')
-    print(session_id1)
-
-    session_id2 = cookies_dict.get('rbzsessionid')
-    print(session_id2)
+    print(cookie_dict)
+    # session_id1 = cookies_dict.get('rbzid')
+    # print(session_id1)
+    #
+    # session_id2 = cookies_dict.get('rbzsessionid')
+    # print(session_id2)
     driver.quit()
     #pickle.dump( driver.get_cookies() , open("cookies.pkl","wb"))
     # print(driver.page_source)
