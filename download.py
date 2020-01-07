@@ -22,8 +22,8 @@ def load_cookies(filename):
 
 def check_for_new_file():
     print('Testing 1...2....3...')
-    # GOOGLE_CHROME_BIN = '/app/.apt/usr/bin/google_chrome'
-    # CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
+    GOOGLE_CHROME_BIN = '/app/.apt/usr/bin/google_chrome'
+    CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
     file_directory = os.path.abspath('files')
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument('--disable-gpu')
@@ -38,9 +38,10 @@ def check_for_new_file():
     # url = "https://liorazi.github.io/info.html"
 
     # browser = webdriver.Firefox(firefox_binary=FirefoxBinary())
-    driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
+    driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
     driver.get(url)
-    pickle.dump( driver.get_cookies() , open("cookies.pkl","wb"))
+    print(driver.get_cookies())
+    #pickle.dump( driver.get_cookies() , open("cookies.pkl","wb"))
     # print(driver.page_source)
     # soup = BeautifulSoup(browser.page_source, 'html.parser')
     #
