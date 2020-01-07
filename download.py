@@ -24,7 +24,7 @@ def check_for_new_file():
     print('Testing 1...2....3...')
     GOOGLE_CHROME_BIN = '/app/.apt/usr/bin/google_chrome'
     CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
-    file_directory = os.path.abspath('files')
+    file_directory = os.path.abspath('/tmp')
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument('--disable-gpu')
     chrome_options.add_argument('--no-sandbox')
@@ -40,7 +40,17 @@ def check_for_new_file():
     # browser = webdriver.Firefox(firefox_binary=FirefoxBinary())
     driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
     driver.get(url)
-    print(driver.get_cookies())
+    cookies_list = driver.get_cookies()
+    cookies_dict = {}
+    for cookie in cookies_list:
+        cookies_dict[cookie['name']] = cookie['value']
+
+    session_id1 = cookies_dict.get('rbzid')
+    print(session_id1)
+
+    session_id2 = cookies_dict.get('rbzsessionid')
+    print(session_id2)
+    driver.quit()
     #pickle.dump( driver.get_cookies() , open("cookies.pkl","wb"))
     # print(driver.page_source)
     # soup = BeautifulSoup(browser.page_source, 'html.parser')
