@@ -40,6 +40,8 @@ def check_for_new_file():
     # browser = webdriver.Firefox(firefox_binary=FirefoxBinary())
     driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
     driver.get(url)
+    print(driver.page_source)
+    
     cookies_list = driver.get_cookies()
     cookies_dict = {}
     for cookie in cookies_list:
