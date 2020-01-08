@@ -28,8 +28,8 @@ def check_for_new_file():
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument('--disable-gpu')
     chrome_options.add_argument('--no-sandbox')
-    chrome_options.add_argument('--headless')
-    chrome_options.add_argument('--disable-dev-shm-usage')
+    # chrome_options.add_argument('--headless')
+    # chrome_options.add_argument('--disable-dev-shm-usage')
     chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
     prefs = { "download.default_directory": file_directory }
     chrome_options.add_experimental_option('prefs', prefs)
@@ -41,7 +41,7 @@ def check_for_new_file():
     driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
     driver.get(url)
     print(driver.page_source)
-    
+
     cookies_list = driver.get_cookies()
     cookies_dict = {}
     for cookie in cookies_list:
