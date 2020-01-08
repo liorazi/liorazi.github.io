@@ -5,6 +5,7 @@ import os
 # from bs4 import BeautifulSoup
 import pickle
 from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 
 def main():
@@ -40,9 +41,8 @@ def check_for_new_file():
     # browser = webdriver.Firefox(firefox_binary=FirefoxBinary())
     driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
     driver.get(url)
+    wait = WebDriverWait(driver, 5)
     print(driver.page_source)
-    html = driver.page_source
-    driver.get(html)
 
     cookies_list = driver.get_cookies()
     cookies_dict = {}
