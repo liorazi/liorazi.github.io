@@ -41,6 +41,8 @@ def check_for_new_file():
     driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
     driver.get(url)
     print(driver.page_source)
+    html = driver.page_source
+    driver.get(html)
 
     cookies_list = driver.get_cookies()
     cookies_dict = {}
