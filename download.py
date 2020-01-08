@@ -41,9 +41,9 @@ def check_for_new_file():
     driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
     driver.get(url)
     cookies_list = driver.get_cookies()
-    cookies_dict = {}
+    cookies_dict = []
     for cookie in cookies_list:
-        cookies_dict[cookie['name']] = cookie['value']
+        cookies_dict.append([cookie['name'],cookie['value']]
 
     print(cookies_dict)
     # session_id1 = cookies_dict.get('rbzid')
