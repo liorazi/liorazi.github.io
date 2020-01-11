@@ -1,1 +1,1 @@
-worker: python download.py
+worker: python json_to_csv.py
