@@ -1,6 +1,7 @@
 import json
 import pandas as pd
 import requests
+import subprocess
 
 print("Downloading Tag JSON...")
 items = requests.get('https://data.gov.il/api/action/datastore_search?resource_id=c8b9f9c8-4612-4068-934f-d4acd2e3c06e&limit=1000000')
@@ -22,3 +23,4 @@ df['SUG TAV'] = df['SUG TAV'].apply('{0:0>2}'.format)
 
 print("Saving JSON to CSV File")
 df.to_csv('tag.csv', sep='|', index=None)
+rc = subprocess.call("release.sh")
