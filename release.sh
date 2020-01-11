@@ -6,7 +6,7 @@ echo "Checking out repo..."
 mkdir repo
 cd repo
 echo "Cloning repo..."
-git clone git@github.com:liorazi/liorazi.github.io.git
+git clone https://github.com/liorazi/liorazi.github.io.git
 cd liorazi.github.io
 cp ../../tag.csv .
 git add tag.csv
