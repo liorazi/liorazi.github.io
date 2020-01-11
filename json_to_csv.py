@@ -23,4 +23,4 @@ df['SUG TAV'] = df['SUG TAV'].apply('{0:0>2}'.format)
 
 print("Saving JSON to CSV File")
 df.to_csv('tag.csv', sep='|', index=None)
-rc = subprocess.call("release.sh")
+rc = subprocess.call("release.sh",shell=True)
